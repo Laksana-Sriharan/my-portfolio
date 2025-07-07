@@ -247,17 +247,28 @@ const Portfolio = () => {
                 logo: "usj.png",
                 link: "https://eng.sjp.ac.lk/computereng/",
                 period: "July 2025 – Present",
-                description:
-                  "Conducted undergraduate-level modules in Database Systems and Object-Oriented Programming, focusing on foundational theory, hands-on laboratory sessions, and the application of modern software engineering practices. Designed course content, assessments, and delivered lectures aimed at improving student understanding and industry readiness."
-              },
+                description: (
+                  <>
+                    <ul className="list-disc list-inside text-gray-300 mb-2 space-y-1">
+                      <li>Conducted undergraduate-level modules in Database Systems and Object-Oriented Programming, focusing on foundational theory, hands-on laboratory sessions, and the application of modern software engineering practices. Designed course content, assessments, and delivered lectures aimed at improving student understanding and industry readiness.</li>
+                    </ul>
+                  </>
+                )
+                },
               {
                 title: "Research Assistant",
                 company: "Department of Computer Engineering – University of Sri Jayewardenepura",
                 logo: "usj.png",
                 link: "https://eng.sjp.ac.lk/computereng/",
-                period: "2020 – 2022",
-                description:
-                  "Contributed to academic research in software performance engineering. Collaborated with the Faculty of Medicine, University of Sri Jayewardenepura, on an interdisciplinary research project aimed at enhancing healthcare systems through technology."
+                period: "March 2025 - June 2025",
+                description: (
+                  <>
+                    <ul className="list-disc list-inside text-gray-300 mb-2 space-y-1">
+                      <li>Contributed to academic research in software performance engineering. Collaborated with the Faculty of Medicine, University of Sri Jayewardenepura, on an interdisciplinary research project aimed at enhancing healthcare systems through technology.</li>
+                    </ul>
+                  </>
+                )
+               
               },
               {
                 title: "Software Engineer – Intern",
@@ -275,7 +286,7 @@ const Portfolio = () => {
                       <li>Scripted data publishing to Google Sheets and GitHub for version-controlled reporting.</li>
                       <li>Created interactive dashboards in Looker Studio for visual insights.</li>
                     </ul>
-                    <p className="text-gray-400">
+                    <p className="text-gray-300">
                       <strong>Technologies:</strong> JMeter, Azure DevOps, Google Sheets API, GitHub, Looker Studio, CI/CD Pipelines
                     </p>
                   </>
@@ -634,7 +645,7 @@ const Portfolio = () => {
             },
             {
               title: "BCS Professional Graduate Diploma in IT",
-              issuer: "BCS | The Chartered Institute for ITta",
+              issuer: "BCS | The Chartered Institute for IT",
               date: "November 2022",
               link: "https://drive.google.com/file/d/1ugMxBE32s0FfEe51WE0w0uZfwru_wrB5/view?usp=sharing",
               logo: "bcs.jpeg"
