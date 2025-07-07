@@ -149,7 +149,7 @@ const Portfolio = () => {
               <Github size={24} />
             </a>
             <a
-              href="https://medium.com/@yourusername"
+              href="https://medium.com/@laksana.sriharan"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-green-600 rounded-full hover:bg-green-700 transition-colors hover:scale-110 transform"
@@ -357,7 +357,12 @@ const Portfolio = () => {
                 degree: "G.C.E. Advanced Level (Mathematics Stream)",
                 school: "Hindu Ladies College, Colombo -06",
                 year: "August 2018",
-                description: "Chemistry - A, Combined Mathematics - B, Physics - C  Z-score: 1.354",
+                description: (
+                <ul>
+                  <li>Chemistry - A, Combined Mathematics - B, Physics - C</li> 
+                  <li> Z-score: 1.354</li>
+                </ul>
+                ),
                 logo: "school.jpeg"
               },
               {
@@ -574,10 +579,6 @@ const Portfolio = () => {
         <h2 className="text-4xl font-bold text-center mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
           Skills
         </h2>
-        <p className="text-center text-gray-400 text-sm mb-12">
-          🛠️ A combination of technical expertise and soft skills that shape my work ethic.
-        </p>
-
         <div className="grid md:grid-cols-2 gap-8">
           {[
             {
