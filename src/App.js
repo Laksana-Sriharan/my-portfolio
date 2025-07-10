@@ -664,6 +664,13 @@ const Portfolio = () => {
               date: "2021",
               link: "https://drive.google.com/file/d/1sYkd-k2_L1rzzafYNnoduwFYBQ6Nwfyx/view?usp=sharing",
               logo: "bcs.jpeg"
+            },
+            {
+              title: "Certificate in Web Application Design and Development ",
+              issuer: "National Institute of Business Management (NIBM - Sri Lanka)",
+              date: "2021",
+              link: "https://drive.google.com/file/d/1iOd1m_9OiTIFcNLNPWdshHlh6a6YeZHj/view?usp=sharing",
+              logo: "nibm.jpg"
             }
           ].map((cert, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 border border-white/10 hover:border-purple-400/50">
