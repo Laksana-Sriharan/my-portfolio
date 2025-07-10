@@ -160,7 +160,7 @@ const Portfolio = () => {
 
           {/* CV Button */}
           <a
-            href="Laksana_Resume.pdf"
+            href="Laksana_CV.pdf"
             download
             className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-white font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-200 hover:scale-105 transform"
           >
@@ -633,7 +633,7 @@ const Portfolio = () => {
     <section id="certificates" className="py-20 bg-black/20">
       <div className="max-w-4xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-          Certificates
+          Certifications
         </h2>
         <div className="grid md:grid-cols-2 gap-8">
           {[
@@ -715,6 +715,26 @@ const Portfolio = () => {
           <div className="space-y-8">
             {[
               {
+                title: "Dean's List Award - Level 4S",
+                organization: "University of Jaffna",
+                description:
+                  "Recognized in the Dean’s List for outstanding academic performance in BSc (Hons) in Computer Science – Level 4S, 2022, with a GPA of 3.74.",
+                date: "March 2025",
+                category: "Academic",
+                hasImage: false
+              },
+
+              {
+                title: "Dean's List Award - Level 3S",
+                organization: "University of Jaffna",
+                description:
+                  "Recognized in the Dean’s List for outstanding academic performance in BSc (Hons) in Computer Science – Level 3S, 2021, with a GPA of 3.78.",
+                date: "Dec 2024",
+                category: "Academic",
+                hasImage: false
+              },
+
+              {
                 title: "David Pieris Best Academic Performance Award",
                 organization: "D P Infotech (Pvt) Ltd",
                 description:
@@ -733,7 +753,7 @@ const Portfolio = () => {
                 organization: "University of Jaffna",
                 description:
                   "Recognized in the Dean’s List for outstanding academic performance in BSc (Hons) in Computer Science – Level 2S, 2020, with a GPA of 3.89.",
-                date: "December 2023",
+                date: "Dec 2023",
                 category: "Academic",
                 hasImage: false
               },
@@ -742,7 +762,7 @@ const Portfolio = () => {
                 organization: "University of Jaffna",
                 description:
                   "Recognized in the Dean’s List for outstanding academic performance in BSc (Hons) in Computer Science – Level 1S, 2019, with a GPA of 3.82.",
-                date: "December 2022",
+                date: "Dec 2022",
                 category: "Academic",
                 hasImage: false
               }
