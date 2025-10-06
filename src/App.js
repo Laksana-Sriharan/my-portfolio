@@ -6,7 +6,6 @@ import {
   Linkedin,
   FileText,
   Calendar,
-  Award,
   Code,
   Download,
   Menu,
@@ -17,19 +16,9 @@ import {
   Phone,
   MapPin,
   Star,
-  Trophy,
   Medal,
-  ChevronRight,
-  Building2
 } from "lucide-react";
 
-/**
- * Final sleek "Tech Professional" portfolio App.js
- * - Deep rose/black gradient background
- * - Framer Motion for smooth, subtle transitions
- * - Improved stat board, crisp media preview modal (static full-clarity)
- * - All original content preserved
- */
 
 const Modal = ({ open, items = [], index = 0, onClose }) => {
   const [i, setI] = useState(index);
@@ -81,7 +70,7 @@ const Modal = ({ open, items = [], index = 0, onClose }) => {
                 src={current.src}
                 alt={current.alt || "Preview"}
                 className="max-h-[78vh] w-auto max-w-full rounded-md object-contain shadow-lg"
-                style={{ imageRendering: "auto" }} // ensures clarity
+                style={{ imageRendering: "auto" }} 
               />
             )}
 
@@ -416,7 +405,7 @@ const Portfolio = () => {
                   </div>
                   <span className="text-pink-100 font-semibold text-sm mb-1">Years Experience</span>
                   <span className="text-amber-400 font-bold text-3xl mb-1" style={{ textShadow: "0 0 20px rgba(252,211,77,0.5)" }}>1+</span>
-                  <span className="text-amber-400 font-bold text-s">Industry / Research</span>
+                  <span className="text-amber-400 font-bold text-s">Industry / Academic</span>
                 </div>
               </div>
 
@@ -459,7 +448,7 @@ const Portfolio = () => {
           </motion.h2>
           <div className="text-rose-200 leading-relaxed text-lg bg-black/40 p-6 rounded-xl border border-rose-800">
             <p className="mb-4">
-              Currently serving as an Instructor at the Faculty of Engineering, University of Sri Jayewardenepura, I actively contribute to innovative research initiatives and academic excellence. My foundation in technology is built on a BSc (Hons) in Computer Science from the University of Jaffna, earned through direct intake, and further strengthened by a Professional Graduate Diploma in IT from BCS, The Chartered Institute for IT.
+              Currently serving as an Instructor at the Department of Computer Engineering, Faculty of Engineering, University of Sri Jayewardenepura, I actively contribute to innovative research initiatives and academic excellence. My foundation in technology is built on a BSc (Hons) in Computer Science from the University of Jaffna, earned through direct intake, and further strengthened by a Professional Graduate Diploma in IT from BCS, The Chartered Institute for IT.
             </p>
             <p className="mb-4">
               I bring hands-on industry experience from my internship at WSO2, where I worked with the Identity and Access Management (IAM) team. There, I gained practical exposure to enterprise-grade security solutions, DevOps practices, and performance testing in real-world software environments.
@@ -488,12 +477,16 @@ const Portfolio = () => {
               link: "https://eng.sjp.ac.lk/computereng/",
               period: "July 2025 – Present",
               description: (
-                <>
+  <>
                   <ul className="list-disc list-inside text-rose-200 mb-2 space-y-1">
-                    <li>Conducted undergraduate-level modules in Database Systems and Object-Oriented Programming, focusing on foundational theory, hands-on laboratory sessions, and the application of modern software engineering practices. Designed course content, assessments, and delivered lectures aimed at improving student understanding and industry readiness.</li>
+                    <li>Conducted undergraduate-level modules in <b>Database Systems</b> and <b>Object-Oriented Programming</b>.</li>
+                    <li>Delivered lectures combining foundational theory with practical, hands-on lab sessions.</li>
+                    <li>Designed and developed course materials, assessments, and programming exercises.</li>
+                    <li>Emphasized modern <b>software engineering practices</b> and <b>industry readiness</b>.</li>
                   </ul>
                 </>
               )
+
             }, {
               title: "Research Assistant",
               company: "Department of Computer Engineering – University of Sri Jayewardenepura",
@@ -501,12 +494,15 @@ const Portfolio = () => {
               link: "https://eng.sjp.ac.lk/computereng/",
               period: "March 2025 - June 2025",
               description: (
-                <>
+  <>
                   <ul className="list-disc list-inside text-rose-200 mb-2 space-y-1">
-                    <li>Contributed to academic research in software performance engineering. Collaborated with the Faculty of Medicine, University of Sri Jayewardenepura, on an interdisciplinary research project aimed at enhancing healthcare systems through technology.</li>
+                    <li>Contributed to academic research in <b>Software Performance Engineering</b>.</li>
+                    <li>Collaborated with the <b>Faculty of Medicine, University of Sri Jayewardenepura</b> on an interdisciplinary research project.</li>
+                    <li>Focused on enhancing <b>healthcare systems through technology</b> and performance-driven design.</li>
                   </ul>
                 </>
               )
+
             }, {
               title: "Software Engineer – Intern",
               company: "WSO2",
@@ -619,6 +615,13 @@ const Portfolio = () => {
               description: "Designed and developed a Point of Sale (POS) system tailored for a book depot in Colombo. The system supports sales transactions, inventory tracking, and customer management, streamlining day-to-day operations and improving overall efficiency. Key features include real-time stock updates, automated billing, and a user-friendly interface for staff. This project focused on addressing the practical needs of a retail environment, delivering a reliable solution that enhances both operational workflow and customer service.",
               tech: ["Laravel", "MySQL"],
               link: "https://github.com/Laksana-Sriharan/POS_Book_Depot",
+              images: [
+                { src: "POS_Dashboard.png", alt: "Dashboard", caption: "Dashboard", type: "image" },
+                { src: "POS_Dashboard_2.png", alt: "Dashboard", caption: "Dashboard", type: "image" },
+                { src: "POS_Books.png", alt: "Collection", caption: "Collection", type: "image" },
+                { src: "POS_Payment.png", alt: "Payment of POS System", caption: "Payment of POS System", type: "image" }
+              ]
+              
             }].map((project, idx) => (
               <motion.div key={idx} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: idx * 0.06 }} className="bg-black/40 border border-rose-800 rounded-xl p-5">
                 <div className="flex items-start justify-between mb-3">
@@ -655,43 +658,116 @@ const Portfolio = () => {
       </section>
 
       {/* PUBLICATIONS */}
-      <section id="publications" className="py-16">
-        <div className="max-w-4xl mx-auto px-6">
-          <motion.h2 initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="text-2xl md:text-3xl font-bold text-rose-50 text-center mb-6">Publications</motion.h2>
+    <section id="publications" className="py-16">
+  <div className="max-w-5xl mx-auto px-6">
+    <motion.h2
+      initial={{ opacity: 0, y: 8 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="text-3xl md:text-4xl font-bold text-rose-50 text-center mb-10"
+    >
+      Publications
+    </motion.h2>
 
-          <div className="space-y-4">
-            {[{
-              title: "Exploring the Capabilities of You Only Look Once (YOLO) Algorithm in Object Detection",
-              publication: "ComSpective Vol. 5, Issue 1 — ICT Technical Magazine, Faculty of Computing, Sabaragamuwa University of Sri Lanka",
-              date: "Accepted",
-              link: "https://drive.google.com/file/d/1S3tRRFIRxCSB-eO5XZOxtyfR4HzE5msg/view?usp=sharing",
-              image: "ComSpective-Vol-5-Issue-I.png",
-              tags: null
-            }, {
-              title: "Enhancing Usability in Human-Computer Interaction",
-              publication: "Kananiyam Vol. 06, Department of Computer Science, University of Jaffna",
-              date: "Feb 2025",
-              link: "https://www.society.jfn.ac.lk/compsoc/#kananiyam",
-              image: "kananiyam.jpg",
-              tags: ["UI / UX", "HCI", "Best Practices"]
-            }].map((pub, idx) => (
-              <motion.div key={idx} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: idx * 0.04 }} className="bg-black/40 border border-rose-800 rounded-xl p-4 flex gap-4">
-                <img src={pub.image} alt={pub.title} className="w-36 h-28 object-contain rounded-md border border-rose-800 cursor-pointer" onClick={() => openMedia([{ src: pub.image, alt: pub.title, caption: pub.publication, type: "image" }], 0)} />
-                <div className="flex-1">
-                  <div className="flex items-start justify-between">
-                    <h3 className="text-lg font-semibold text-rose-50">{pub.title}</h3>
-                    <a href={pub.link} target="_blank" rel="noreferrer" className="text-rose-300 hover:text-white"><ExternalLink size={18} /></a>
-                  </div>
-                  <p className="text-rose-300 text-sm">{pub.publication}</p>
-                  <div className="mt-2 inline-block bg-emerald-300 text-black text-xs font-semibold px-3 py-1 rounded-full">{pub.date}</div>
-
-                  {pub.tags && <div className="mt-3 flex gap-2">{pub.tags.map((t, j) => <span key={j} className="text-xs px-2 py-1 bg-rose-900/40 rounded-full text-rose-200">#{t}</span>)}</div>}
-                </div>
-              </motion.div>
-            ))}
+    <div className="grid gap-8">
+      {[{
+        title: "Exploring the Capabilities of You Only Look Once (YOLO) Algorithm in Object Detection",
+        publication: "ComSpective Vol. 5, Issue 1 — ICT Technical Magazine, Faculty of Computing, Sabaragamuwa University of Sri Lanka",
+        date: "Accepted",
+        link: "https://drive.google.com/file/d/1S3tRRFIRxCSB-eO5XZOxtyfR4HzE5msg/view?usp=sharing",
+        image: "ComSpective-Vol-5-Issue-I.png",
+        tags: null
+      }, {
+        title: "Enhancing Usability in Human-Computer Interaction",
+        publication: "Kananiyam Vol. 06, Department of Computer Science, University of Jaffna",
+        date: "Feb 2025",
+        link: "https://www.society.jfn.ac.lk/compsoc/#kananiyam",
+        image: "kananiyam.jpg",
+        tags: ["UI / UX", "HCI", "Best Practices"]
+      }].map((pub, idx) => (
+        <motion.div
+          key={idx}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: idx * 0.08 }}
+          className="bg-gradient-to-br from-black/50 to-rose-950/20 border border-rose-800/40 rounded-2xl p-8 hover:border-rose-700/60 hover:shadow-xl hover:shadow-rose-900/20 transition-all duration-300 backdrop-blur-sm"
+        >
+          {/* Title + Link */}
+          <div className="flex justify-between items-start mb-4">
+            <h3 className="text-xl font-bold text-rose-50 flex-1 leading-tight hover:text-rose-200 transition-colors">
+              {pub.title}
+            </h3>
+            <a
+              href={pub.link}
+              target="_blank"
+              rel="noreferrer"
+              className="ml-3 text-rose-400 hover:text-rose-300 hover:scale-110 transition-all duration-200 flex-shrink-0"
+            >
+              <ExternalLink size={20} />
+            </a>
           </div>
-        </div>
-      </section>
+
+          {/* Publication Text */}
+          <p className="text-rose-300/90 text-sm mb-4 leading-relaxed">
+            {pub.publication}
+          </p>
+
+          {/* Date Badge */}
+          <span className="inline-block mb-6 bg-gradient-to-r from-emerald-500 to-black text-white font-semibold text-xs px-5 py-2 rounded-full shadow-md shadow-black/50 tracking-wide">
+            {pub.date}
+          </span>
+
+
+
+          {/* Enhanced Preview Image */}
+          <div
+            className="relative group cursor-pointer rounded-xl overflow-hidden border border-rose-700/60 w-full max-w-xs mx-auto shadow-md hover:shadow-rose-800/50 transition-all duration-300"
+            style={{
+              aspectRatio: "3 / 4", // Keeps natural proportions
+              imageRendering: "high-quality", // Improves sharpness
+            }}
+            onClick={() =>
+              openMedia(
+                [{ src: pub.image, alt: pub.title, caption: pub.publication, type: "image" }],
+                0
+              )
+            }
+          >
+            <img
+              src={pub.image}
+              alt={pub.title}
+              loading="lazy"
+              className="w-full h-full object-contain rounded-md transition-transform duration-500 group-hover:scale-105"
+              style={{
+                filter: "contrast(105%) brightness(105%)",
+              }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="bg-rose-500/90 rounded-full p-3 backdrop-blur-sm">
+                <ExternalLink size={22} className="text-white" />
+              </div>
+            </div>
+          </div>
+
+          {/* Tags */}
+          {pub.tags && (
+            <div className="mt-6 flex flex-wrap gap-2">
+              {pub.tags.map((t, j) => (
+                <span
+                  key={j}
+                  className="text-xs px-4 py-1.5 bg-rose-900/50 border border-rose-700/40 rounded-full text-rose-200 hover:bg-rose-900/70 hover:border-rose-600/60 transition-all duration-200"
+                >
+                  #{t}
+                </span>
+              ))}
+            </div>
+          )}
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* SKILLS */}
       <section id="skills" className="py-16 bg-black/5">
@@ -745,25 +821,25 @@ const Portfolio = () => {
             }, {
               title: "BCS Professional Graduate Diploma in IT",
               issuer: "BCS | The Chartered Institute for IT",
-              date: "November 2022",
+              date: "Nov 2022",
               link: "https://drive.google.com/file/d/1ugMxBE32s0FfEe51WE0w0uZfwru_wrB5/view?usp=sharing",
               logo: "bcs.jpeg"
             }, {
               title: "BCS Diploma in IT",
               issuer: "BCS | The Chartered Institute for IT",
-              date: "November 2021",
+              date: "Nov 2021",
               link: "https://drive.google.com/file/d/1DGWhAOWTfNwK3_KFOG1WIiNvA5T9N_dl/view?usp=sharing",
               logo: "bcs.jpeg"
             }, {
               title: "BCS Certificate in IT",
               issuer: "BCS | The Chartered Institute for IT",
-              date: "2021",
+              date: "Nov 2021",
               link: "https://drive.google.com/file/d/1sYkd-k2_L1rzzafYNnoduwFYBQ6Nwfyx/view?usp=sharing",
               logo: "bcs.jpeg"
             }, {
               title: "Certificate in Web Application Design and Development",
               issuer: "National Institute of Business Management (NIBM - Sri Lanka)",
-              date: "2021",
+              date: "May 2021",
               link: "https://drive.google.com/file/d/1iOd1m_9OiTIFcNLNPWdshHlh6a6YeZHj/view?usp=sharing",
               logo: "nibm.jpg"
             }].map((cert, idx) => (
@@ -840,7 +916,14 @@ const Portfolio = () => {
               category: "Academic",
               hasImage: false,
               gpa: "3.82"
-            }].map((award, idx) => (
+            },{
+              title: "IEEE WomenShar Inter-University Essay Competition - 2nd Runner Up",
+              organization: "IEEE Women in Engineering Student Branch Affinity of the University of Jaffna",
+              description: "Awarded 2nd Runner Up in the IEEE WomenShar Inter-University Essay Competition for crafting a compelling and insightful essay that stood out among multiple universities.",
+              date: "July 2022",
+              category: "Literary",
+              hasImage: false,
+            },].map((award, idx) => (
               <motion.div key={idx} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: idx * 0.03 }} className={`p-4 rounded-xl border ${award.special ? "border-rose-600 bg-gradient-to-r from-rose-900/30 to-black/30" : "border-rose-800 bg-black/40"}`}>
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex items-start gap-3">
